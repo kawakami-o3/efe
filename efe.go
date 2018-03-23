@@ -3,9 +3,18 @@ package efe
 import (
 	"fmt"
 
-	"github.com/k0kubun/pp"
 	"github.com/kawakami-o3/efp"
 )
+
+type Parser struct {
+
+}
+
+type Lexer struct {
+	input string
+	p int
+	c rune
+}
 
 type Tokens struct {
 	efp.Tokens
@@ -32,6 +41,8 @@ func Eval(formula string) string {
 	ps := efp.ExcelParser()
 	ps.Parse(formula)
 
-	pp.Println(&Tokens{ps.Tokens})
+	//pp.Println(&Tokens{ps.Tokens})
+	//pp.Println(ps)
+	fmt.Println(ps.PrettyPrint())
 	return ""
 }

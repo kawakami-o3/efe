@@ -8,6 +8,7 @@ func TestEFE(t *testing.T) {
 	formulae := []string{
 		// Simple test formulae
 		`=1+3+5`,
+		`=IF(P5=1.0,"NA",IF(P5=2.0,"A",IF(P5=3.0,"B",IF(P5=4.0,"C",IF(P5=5.0,"D",IF(P5=6.0,"E",IF(P5=7.0,"F",IF(P5=8.0,"G"))))))))`,
 		/*
 			`=3 * 4 + 5`,
 			`=50`,
